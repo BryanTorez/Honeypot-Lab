@@ -269,47 +269,49 @@ The main options that we'll be using is Kibana and the attack map. So first let'
 <br />
 <img src="https://snipboard.io/hOBkIT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+We want to create a new rule. So we want to enable TCP as the protocol and the port range is going to be 64 294 colon 64 297 we want to have the source as my IP and then hit the plus button and then we want to remove the two rules that we created in the beginning which allowed only our IP to access the Honeypot so I'll go ahead and remove that it'll ask you are you sure you want to delete this firewall rule yes and do the same for the other one:  <br/>
 <br />
 <img src="https://snipboard.io/1yMpWx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+once those two rules have been deleted we need to read add those two rules but this time instead of selecting your IP you want to select any so we'll go ahead and select TCP put in the port range of one colon 655 35 Source anywhere click on the plus button and I'll just do the same for UDP just in case with the port 65535 and the source is set to anywhere we should have a total of three inbound ipv4 rules that we've created the first two are to allow any IP addresses coming inbound to our Honeypot using both protocols TCP and UDP the third rule will allow our IP to access our Honeypot using TCP with the port range of 64 294 to 64 297 :  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+Now that we've updated these rules we can go back over to our attack map and we automatically see additional information so at the bottom right we can see the time that this event occurred what IP it generated from the country and what Honeypot captured that information along with its service and then on the the left of that we get the top hits:  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+So currently we only see information sourcing from the United States. Now if it came from a different country such as China we would see that here as well and then you see a nice count of the IPS and on the very left we see the color associated with the service we can simply highlight any of these dots on the map click on it and it will show us the IP address notice it has a classification of known attacker I think that's pretty cool I'll leave this on for a couple minutes :  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+let's head over to Cabana in Cabana we have a lot of dashboards that we can select now if we go back over to the attack map you notice that the Honeypot that was used was called Honey Trap going back over to Cabana we can look for Honey Trap and select its dashboard because we know for a fact that there should be data there:  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+So I see Honey Trap here I'll go ahead and click on that... I guess I'm a liar. So we'll have to wait just a little bit for it to ingest while we wait for thisdashboard to be populated with data we can actually query for data if you want by selecting  the hamburger icon at the top left and you want to select the Discover under this tab you can practice your query skills and learn how to use Cabana:  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+overall a fantastic way to gain hands on experience so for example I can go ahead and expand the first event and on the right hand side we can get a list of all of the fields and their field value now let's just say I am interested in the destination IP I can highlight over these icons to see what they mean we can filter for the value filter out the value filter for field present toggle column and table and finally pin the field I'll click on the toggle column in table icon and by doing so our table automatically added the destination IP field now this is a much cleaner view for us to take a look. You can add more columns onto to your table and this will help you with your analysis.:  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+heading back over to our Honey Trap dashboard we finally get some events so we see that there are seven total attacks with seven unique Source IPS if we scroll down we see the attacks by ports we also see the attacks by country and so far it is all coming from the United States and we have the IP reputation which is a known attacker at the bottom we have the asns and on the right we get the source IP the cool thing about teapot is that you can click on the source IP and it'll check its IP reputation we can see that the sender IP reputation is currently set to PO let's head back over to our attack map and look at that we see a lot more countries:  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+It looks pretty fancy we see that there is Portugal turkey Bulgaria Brazil no China yet which is quite surprisingly in my opinion so you might have noticed I had another box on vulture and that was actually another teapot:  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+now I left this for a couple days and this is what we see here looking at the same honey trap we have 6,583 attacks with 1,485 unique Source IPS we can see that the attacks were coming from all over the world scrolling down we can see a nice little heat map which is pretty cool and looking at the IP reputation majority of it was from a known attacker but the second is a mass scanner and then bot SL crawler and lastly you have your tour exit nodes looking at the countries the top one is United States followed by United Kingdom and then Italy and look we got China and you have your asns and your Source IP:  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-:  <br/>
+so
+17:35
+a Honeypot is pretty cool to spin up and it can collect a lot of interesting information if this is what you're looking for I do recommend that if you follow along you practice your Cabana queries because this will not only help you build confidence but familiarity with the query language again overall a fantastic way to gain hands-on experience honey Poots are pretty cool not going to lie and it can provide you a quick glimpse of what the internet is currently doing but at the end of the day you'll quickly find out that everybody is just scanning everybody:  <br/>
 <br />
 <img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
