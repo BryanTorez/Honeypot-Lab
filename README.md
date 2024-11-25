@@ -201,33 +201,77 @@ While we wait for T-Pot to be installed I wanted to show you their GitHub page b
 <br />
 <img src="https://snipboard.io/MrcA0U.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-The most important important thing is the required ports. So we need to make sure that we have the following ports enabled for our Honeypot to work. Going back over to our console we now see that teapot is successfully installed now I know it is hard to see but right above the log on prompt we have information about our honeypot. So first we have the IP of our Honeypot and then we have the SSH along with this IP and Port that we can use to connect. Next is the web so we can use this IP and port port to connect over to the web server and lastly we have the admin we can use the IP and port to access the admin portal for this Honeypot:  <br/>
 <br />
-<img src="https://snipboard.io/3SxJDA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+The most important important thing is the required ports. So we need to make sure that we have the following ports enabled for our Honeypot to work.:  <br/>
+<br />
+<img src="https://snipboard.io/6485Pz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+Going back over to our console we now see that teapot is successfully installed now I know it is hard to see but right above the log on prompt we have information about our honeypot. So first we have the IP of our Honeypot and then we have the SSH along with this IP and Port that we can use to connect. Next is the web so we can use this IP and port port to connect over to the web server and lastly we have the admin we can use the IP and port to access the admin portal for this Honeypot:  <br/>
+<br />
+<img src="https://snipboard.io/NUfzyA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+Now let's access the web portal which is the one above admin. Your IP is going to be different than mine so make sure that you type in your correct IP and port. In my case it is going to be 216.128.185.215, on port, 64297. Now you will get 400 bad requests if you do not specify 'https', so let's do that.:  <br/>
+<br />
+<img src="https://snipboard.io/fQqLGZ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/IqWsz9.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/vzGadE.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/gcn1x9.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/0MtdTj.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+Now we get your connection isn't private. Go ahead and select advance and we'll continue to this IP. You want to use the username and password that you created during the setup. My username was Steven and then I entered my password and now we're on the homepage of T-Pot:  <br/>
+<br />
+<img src="https://snipboard.io/u2rlWS.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/3uXiyc.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/1pLjte.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/igqsob.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+There is a lot of information here and very quickly on the left we have the Attack Map. Next is the Cockpit which is your admin panel to manage T-Pot. Then you have Cyberchef which is a Swiss Army tool that can be used for various purposes. Next to last, you have Elasticvue, which is a web goey for elastic search. Kibana is where you can query data and create visualizations. Lastly, Spiderfoot, this is a huge collection of ENT tools that you can use to find out more information:  <br/>
+<br />
+<img src="https://snipboard.io/hT8k6F.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+the
+11:32
+The main options that we'll be using is Kibana and the attack map. So first let's go ahead and click on Attack Map. This is what we see in real-time. Now we don't see any information here. That is because our firewall is blocking all of the inbound access and only I can access our honeypot. So we're going to modify our firewall rule and remove that. Make sure you're under your Honeypot and then go under settings. Go to firewall, click on manage, you want to select your correct firewall in my case it is called Honeypot.:  <br/>
+<br />
+<img src="https://snipboard.io/hHjicB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://snipboard.io/1yMpWx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://snipboard.io/aUP7fg.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://snipboard.io/hOBkIT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 :  <br/>
 <br />
-<img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-:  <br/>
-<br />
-<img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-:  <br/>
-<br />
-<img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-:  <br/>
-<br />
-<img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-:  <br/>
-<br />
-<img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-:  <br/>
-<br />
-<img src="https://snipboard.io/hxHPYr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/1yMpWx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 :  <br/>
 <br />
